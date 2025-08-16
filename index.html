@@ -5,30 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Quote Generator</title>
+    <link rel="icon" href="fortune cookie.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mr+Bedfort&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <style type="text/css">
+      body {
+        cursor: url("data:image/x-icon;base64,AAACAAEAICACAAcAAwAwAQAAFgAAACgAAAAgAAAAQAAAAAEAAQAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAJAAAACIAAAAhAAAAIIAAACB/AAAgAIAAIAEAACACAAAgBAAAIAgAACAQAAAgIAAAIEAAACCAAAAhAAAAIgAAACQAAAA4AAAAAAAAAAAAAA///////////////////////////////////////////////////////////+f////D////wf///8D////Af///wAD//8AAf//AAP//wAH//8AD///AB///wA///8Af///AP///wH///8D////B////w////8f/////////////8="),
+          auto;
+      }
+    </style>
   </head>
   <body>
-    <h1>Quote Generator</h1>
-    <h3>Click the button to reveal a quote!</h3>
+    <h1>꒰ <em></em>Fortune Cookie ꒱</h1>
+    <h3>⤷ ゛ᝰ.ᐟ⊹ Click the button to reveal your destiny... ₊⟡𖦹⋆ ˎˊ˗</h3>
 
     <div>
       <button id="btn"><em>Generate quote</em></button>
     </div>
 
-    <div id="quote">Click the button to get a quote!</div>
+    <div id="quote"></div>
 
     <script>
       const btn = document.getElementById("btn");
       const quoteDiv = document.getElementById("quote");
 
-      async function fetchQuote() {
-        try {
-          const response = await fetch("https://dummyjson.com/quotes/random");
-          const data = await response.json();
-          quoteDiv.textContent = `"${data.quote}" — ${data.author}`;
-        } catch (error) {
-          quoteDiv.textContent = "Oops! Could not fetch a quote.";
-        }
+      const quotes = [
+        "Do not be afraid of competition.",
+        "An exciting opportunity lies ahead of you.",
+        "Let yourself find peace.",
+        "Confidence will lead you on.",
+        "You’ve got this!",
+        "Kindness always comes back.",
+        "You are stronger than you think.",
+        "The best is yet to come.",
+        "Breathe. Relax. Let it flow.",
+        "Your light makes a difference.",
+      ];
+
+      function fetchQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        quoteDiv.textContent = quotes[randomIndex];
       }
 
       btn.addEventListener("click", fetchQuote);

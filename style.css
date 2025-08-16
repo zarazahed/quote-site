@@ -1,20 +1,27 @@
 body {
-  background-color: rgb(255, 204, 0);
+  background-color: rgb(244, 194, 113);
 }
 
 h1 {
   color: rgb(0, 0, 0);
+  font-family: "Mr Bedfort", cursive;
   text-align: center;
+  font-size: 90px;
+  margin-bottom: -20px;
+  margin-top: -1px;
 }
 
 h3 {
   color: rgb(0, 0, 0);
   text-align: center;
+  font-family: "DM Serif Text", serif;
+  margin-top: -10px;
 }
 
 * {
   padding: 10px;
-  font-family: verdana;
+  font-family: "DM Serif Text", serif;
+  cursor: url("cursor (2).cur"), auto;
 }
 
 #btn {
@@ -23,17 +30,41 @@ h3 {
   color: white;
   border-radius: 10px;
   padding: 20px;
-  max-width: 170px;
+  max-width: 300px;
   margin: 0 auto;
+  font-size: large;
+  transition: transform 0.3s ease-in-out;
 }
 
 #btn:hover {
-  background-color: #4f4f4f;
+  background-color: #262626;
+  transform: scale(1.1);
 }
 
 #quote {
-  font-size: 1.2em;
+  font-size: 60px;
   margin: 20px auto;
-  max-width: 500px;
+  max-width: 900px;
   color: black;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "DM Serif Text", serif;
+}
+
+.mr-bedfort-regular {
+  font-family: "Mr Bedfort", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-text-regular-italic {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
 }
