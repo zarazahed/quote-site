@@ -7,7 +7,7 @@
 > The site uses a pixel theme with a custom cursor, and soft colors to give it a cozy vibe.
 > Here's a screenshot!
 >
-> ![Screenshot of the home](ss1.png)
+> ![Screenshot of the page](s1.png)
 >
 ### How you can view my project
 > Click here: https://zarazahed.github.io/quote-site/
