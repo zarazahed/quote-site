@@ -14,7 +14,7 @@
 > 
 ### Why I made my project:
 > I thought it'd be fun to make so I could use it whenever I wanted some random wisdom :)
-> It helped me review some CSS and JS concepts I learned on my last few projects
+> It helped me review some CSS and JS concepts I learned on my last few projects.
 > 
 ### How I made my project
 > I used HTML, CSS, JavaScript to make the site!
