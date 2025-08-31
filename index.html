@@ -9,11 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mr+Bedfort&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -25,11 +21,13 @@
     </style>
   </head>
   <body>
+    <audio id="pop-sound" src="pop2.wav"></audio>
+
     <h1>꒰ <em></em>Fortune Cookie ꒱</h1>
-    <h3>⤷ ゛ᝰ.ᐟ⊹ Click the button to reveal your destiny... ₊⟡𖦹⋆ ˎˊ˗</h3>
+    <h3>⤷ ゛ᝰ.ᐟ⊹ Click below to reveal your destiny... ₊⟡𖦹⋆ ˎˊ˗</h3>
 
     <div>
-      <button id="btn"><em>Generate quote</em></button>
+      <a id="btn"></a>
     </div>
 
     <div id="quote"></div>
@@ -37,13 +35,14 @@
     <script>
       const btn = document.getElementById("btn");
       const quoteDiv = document.getElementById("quote");
+      const sound = document.getElementById("pop-sound");
 
       const quotes = [
         "Do not be afraid of competition.",
         "An exciting opportunity lies ahead of you.",
         "Let yourself find peace.",
         "Confidence will lead you on.",
-        "You’ve got this!",
+        "You’ve got this.",
         "Kindness always comes back.",
         "You are stronger than you think.",
         "The best is yet to come.",
@@ -62,7 +61,11 @@
 
       function fetchQuote() {
         const randomIndex = Math.floor(Math.random() * quotes.length);
+        btn.style.backgroundImage = 'url("pixil-frame-0 (2) copy.png")';
         quoteDiv.textContent = quotes[randomIndex];
+        quoteDiv.style.display = "block";
+        sound.currentTime = 0;
+        sound.play();
       }
 
       btn.addEventListener("click", fetchQuote);
